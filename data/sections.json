@@ -1158,6 +1158,32 @@
               }
             },
             {
+              "name": "cplt",
+              "repo": "navikt/cplt",
+              "org": "NAV (Norwegian Labour and Welfare Administration)",
+              "desc": "Kernel-backed sandbox wrapper for AI coding agents that applies Seatbelt on macOS or Landlock and seccomp on Linux, content-pins approvals for repository policy, filters environment and resource access, and gates selected git and GitHub commands.",
+              "license": "MIT",
+              "status": [
+                "open_source"
+              ],
+              "note": "— **note:** no native Windows backend; the standard posture permits outbound HTTPS on port 443 and warns rather than blocks `git push`, while stricter egress and push blocking require explicit configuration. Linux has documented limitations around Git metadata, localhost, and SSH-agent isolation, so review the threat model and effective policy for the target platform.",
+              "related": [
+                {
+                  "label": "nono",
+                  "url": "https://github.com/nolabs-ai/nono"
+                },
+                {
+                  "label": "microsandbox",
+                  "url": "https://github.com/superradcompany/microsandbox"
+                }
+              ],
+              "metrics": {
+                "stars": 114,
+                "updated": "2026-09-06",
+                "snapshot": "2026-09-07"
+              }
+            },
+            {
               "name": "Arcjet Guard",
               "repo": "arcjet/arcjet-js",
               "org": "Arcjet",

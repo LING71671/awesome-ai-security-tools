@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-09-04. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-09-07. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -153,7 +153,8 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
 
 - **[nono](https://github.com/nolabs-ai/nono)** 🟢 — Least-privilege sandbox for AI coding agents that isolates the agent and delegated tools with composable filesystem, network, credential-proxy, and command policies. *(NoLabs)* — **note:** APIs are still stabilizing ahead of the 1.0 release; review every pulled profile before use. *(★ 3,687 · updated 2026-08-17)*
   - **Related:** [microsandbox](https://github.com/superradcompany/microsandbox) · [ToolHive](https://github.com/stacklok/toolhive)
-- **[cplt](https://github.com/navikt/cplt)** 🟢 — Kernel-enforced sandbox for AI coding agents (Seatbelt on macOS, Landlock and seccomp-BPF on Linux) whose policy is a TOML file committed to the repository, so deny rules are reviewed in the pull request and travel with the project. Command guards block `gh pr merge` and `gh repo delete` by default. *(Nav, Norwegian Labour and Welfare Administration)* — **note:** no Windows support; the `git push` guard warns by default and must be set to block. *(★ 113 · updated 2026-09-06)*
+- **[cplt](https://github.com/navikt/cplt)** 🟢 — Kernel-backed sandbox wrapper for AI coding agents that applies Seatbelt on macOS or Landlock and seccomp on Linux, content-pins approvals for repository policy, filters environment and resource access, and gates selected git and GitHub commands. *(NAV (Norwegian Labour and Welfare Administration))* — **note:** no native Windows backend; the standard posture permits outbound HTTPS on port 443 and warns rather than blocks `git push`, while stricter egress and push blocking require explicit configuration. Linux has documented limitations around Git metadata, localhost, and SSH-agent isolation, so review the threat model and effective policy for the target platform. *(★ 114 · updated 2026-09-06)*
+  - **Related:** [nono](https://github.com/nolabs-ai/nono) · [microsandbox](https://github.com/superradcompany/microsandbox)
 - **[Arcjet Guard](https://github.com/arcjet/arcjet-js)** 🟢🟠 — JavaScript runtime guard for AI-agent tool calls and MCP handlers, with prompt-injection detection, sensitive-data detection/redaction, and custom local policy rules. *(Arcjet)* — **note:** open SDK packages integrate with Arcjet's hosted platform; assess the service, account, and data-processing requirements for the protections you enable. *(★ 681 · updated 2026-08-15)*
   - **Related:** [LLM Guard](https://github.com/protectai/llm-guard) · [AgentLock](https://github.com/webpro255/agentlock)
 - **[ToolHive](https://github.com/stacklok/toolhive)** 🟢 — Platform for running MCP servers in isolated containers with per-request identity/access policy, registry and gateway workflows, audit logs, Kubernetes operator support, and observability hooks. *(Stacklok)* *(★ 2,019 · updated 2026-08-14)*
