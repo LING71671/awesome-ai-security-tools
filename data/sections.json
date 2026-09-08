@@ -5004,6 +5004,33 @@
             "updated": "2026-08-14",
             "snapshot": "2026-08-17"
           }
+        },
+        {
+          "name": "Open-ReverseLab",
+          "repo": "LING71671/open-reverselab",
+          "desc": "Agent-native AI reverse-engineering platform whose MCP server exposes Ghidra headless analysis (ghidra_headless_analyze, ghidra_summary_*) plus Frida, x64dbg, Rizin and YARA tooling, backed by a runnable CTF/APK/PE attack knowledge base.",
+          "status": [
+            "open_source"
+          ],
+          "license": "GPL-3.0",
+          "flags": [
+            "copyleft"
+          ],
+          "related": [
+            {
+              "label": "GhidraMCP",
+              "url": "https://github.com/LaurieWired/GhidraMCP"
+            },
+            {
+              "label": "ReVa",
+              "url": "https://github.com/cyberkaida/reverse-engineering-assistant"
+            }
+          ],
+          "metrics": {
+            "stars": 1101,
+            "updated": "2026-09-08",
+            "snapshot": "2026-09-08"
+          }
         }
       ]
     },
